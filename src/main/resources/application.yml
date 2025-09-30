@@ -6,4 +6,9 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          public-key-location: classpath:public.pem
+          public-key-location: ${app.jwt.public-key}
+
+app:
+  jwt:
+    public-key: classpath:public.pem
+    private-key: classpath:private_key.pem
